@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework/ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="devanshi_mod2_product_name" type="Devanshi\Mod2\Plugin\ProductPlugin"/>
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="devanshi_mod2_copyright" type="Devanshi\Mod2\Plugin\CopyrightPlugin"/>
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Header">
+        <plugin name="devanshi_mod2_welcome_message" type="Devanshi\Mod2\Plugin\WelcomePlugin"/>
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="devanshi_mod2_breadcrumbs" type="Devanshi\Mod2\Plugin\BreadcrumbsPlugin"/>
+    </type>
+
+</config>

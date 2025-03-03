@@ -374,6 +374,7 @@ return [
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
         'Devanshi_Mod1' => 1,
+        'Devanshi_Mod2' => 1,
         'Devanshi_SampleModule' => 1,
         'Macademy_Jumpstart' => 1,
         'PayPal_Braintree' => 1,
