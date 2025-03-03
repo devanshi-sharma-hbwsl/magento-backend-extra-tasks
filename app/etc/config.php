@@ -376,6 +376,7 @@ return [
         'Devanshi_Mod1' => 0,
         'Devanshi_Mod2' => 0,
         'Devanshi_Mod3' => 0,
+        'Devanshi_Mod4' => 1,
         'Devanshi_SampleModule' => 0,
         'Macademy_Jumpstart' => 0,
         'PayPal_Braintree' => 1,

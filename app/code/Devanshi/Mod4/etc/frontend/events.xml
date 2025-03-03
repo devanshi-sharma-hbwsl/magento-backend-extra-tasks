@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_front_send_response_before">
+        <observer name="log_all_routes" instance="Devanshi\Mod4\Observer\LogAllRoutes" />
+        <observer name="redirect_404" instance="Devanshi\Mod4\Observer\Redirect404" />
+    </event>
+</config>
