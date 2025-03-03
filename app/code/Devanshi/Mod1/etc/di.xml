@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework/ObjectManager/etc/config.xsd">
+    <preference for="Devanshi\Mod1\Api\CategoryInterface" type="Devanshi\Mod1\Model\Category"/>
+    <preference for="Magento\Catalog\Api\Data\CategoryInterface" type="Devanshi\Mod1\Api\CategoryInterface"/>
+    
+    <type name="Devanshi\Mod1\TestClass">
+        <arguments>
+            <argument name="params" xsi:type="array">
+                <item name="param1" xsi:type="string">Devanshi's item1</item>
+                <item name="param2" xsi:type="string">Devanshi's item2</item>
+            </argument>
+            <argument name="message" xsi:type="string">Hello Devanshi, this is a test message</argument>
+        </arguments>
+    </type>
+</config>

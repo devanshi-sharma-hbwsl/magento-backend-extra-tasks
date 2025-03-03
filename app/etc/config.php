@@ -373,6 +373,8 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
+        'Devanshi_Mod1' => 1,
+        'Devanshi_SampleModule' => 1,
         'Macademy_Jumpstart' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeCustomerBalance' => 1,
