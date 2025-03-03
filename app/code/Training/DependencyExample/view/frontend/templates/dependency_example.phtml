@@ -1,0 +1,34 @@
+<?php /** @var \Training\DependencyExample\Block\Example $block */ ?>
+
+<div>
+    <h2>Devanshi Sharma Dependency Injection</h2>
+</div>
+
+<p>
+    Class Main ID is: <?= $block->getMain()->getId() ?>
+</p>
+
+<p>
+    Class Injectable ID is: <?= $block->getMain()->getInjectable()->getId() ?>
+</p>
+
+<p>
+    Class Non Injectable ID is: <?= $block->getMain()->getNonInjectable()->getId() ?>
+</p>
+
+<p>
+    Class Util Name is: <?= $block->getMain()->getUtil()->getName() ?>
+</p>
+
+<p>
+    Class Heavy Operation Name is: <?= $block->getMain()->getHeavyOperation()->getName() ?>
+</p>
+
+<p>
+    Class Default Name is: <?= $block->getMain()->getDefaultName()->getName() ?>
+</p>
+
+<p>
+    Class Optional Name is: <?= $block->getMain()->getOptional()->getName() ?>
+</p>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+ <event name="checkout_cart_product_add_after">
+    <observer name="training_observerexample_observer" instance="Training\ObserverExample\Observer\Example" />
+</event>
+
+  
+</config>

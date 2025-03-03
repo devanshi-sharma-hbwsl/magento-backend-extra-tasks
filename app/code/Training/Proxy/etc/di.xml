@@ -1,0 +1,8 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Training\Proxy\Model\FeaturedProducts\FeaturedProductsInterface" type="Training\Proxy\Model\FeaturedProducts\FeaturedBySales" />
+    <type name="Training\Proxy\Model\FeaturedProducts">
+        <arguments>
+            <argument name="featuredBySales" xsi:type="object">Training\Proxy\Model\FeaturedProducts\FeaturedBySales\Proxy</argument>
+        </arguments>
+    </type>
+</config>
