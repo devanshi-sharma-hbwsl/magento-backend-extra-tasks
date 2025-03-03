@@ -13,4 +13,18 @@
             <argument name="message" xsi:type="string">Hello Devanshi, this is a test message</argument>
         </arguments>
     </type>
+
+    <type name="Devanshi\Mod1\TestClass">
+        <arguments>
+            <argument name="logger" xsi:type="object">Psr\Log\LoggerInterface</argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Logger\Monolog">
+    <arguments>
+        <argument name="handlers" xsi:type="array">
+            <item name="custom_handler" xsi:type="object">Devanshi\Mod1\Logger\Handler</item>
+        </argument>
+    </arguments>
+</type>
 </config>
