@@ -1,0 +1,16 @@
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+    <?php foreach ($block->getEmployees() as $employee): ?>
+        <tr>
+            <td><?= $employee->getEmployeeId(); ?></td>
+            <td><?= $employee->getFirstName(); ?></td>
+            <td><?= $employee->getLastName(); ?></td>
+            <td><?= $employee->getEmailId(); ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
