@@ -4,7 +4,7 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Devanshi_Mod5::secure" title="Secure Admin Access" sortOrder="10"/>
+                <resource id="Devanshi_Mod5::secure" title="Secure Admin Access - Devanshi" sortOrder="10"/>
             </resource>
         </resources>
     </acl>
