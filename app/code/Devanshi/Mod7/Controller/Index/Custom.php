@@ -1,17 +1,14 @@
 <?php
 namespace Devanshi\Mod7\Controller\Index;
 
-use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use \Magento\Framework\View\Result\PageFactory;
+use Magento\Framework\View\Result\PageFactory;
 
 class Custom implements HttpGetActionInterface
 {
     protected $resultPageFactory;
 
-    public function __construct(
-        Context $context, 
-        PageFactory $resultPageFactory)
+    public function __construct(PageFactory $resultPageFactory)
     {
         $this->resultPageFactory = $resultPageFactory;
     }
@@ -19,7 +16,7 @@ class Custom implements HttpGetActionInterface
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->set(__('Devanshi has a Custom Page'));
+        $resultPage->getConfig()->setPageLayout('2columns-left');
         return $resultPage;
     }
 }
