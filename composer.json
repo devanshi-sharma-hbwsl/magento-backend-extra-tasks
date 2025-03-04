@@ -11,7 +11,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "laminas/laminas-dependency-plugin": true,
             "magento/*": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "phpro/grumphp": true
         },
         "preferred-install": "dist",
         "sort-packages": true
@@ -65,15 +66,18 @@
         "allure-framework/allure-phpunit": "^2",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || ^1.0",
         "dg/bypass-finals": "^1.4",
-        "friendsofphp/php-cs-fixer": "^3.22",
+        "friendsofphp/php-cs-fixer": "^3.70",
+        "jakub-onderka/php-parallel-lint": "^1.0",
         "lusitanian/oauth": "^0.8",
         "magento/magento-coding-standard": "*",
         "magento/magento2-functional-testing-framework": "^4.7",
         "pdepend/pdepend": "^2.10",
-        "phpmd/phpmd": "^2.12",
+        "phpmd/phpmd": "^2.15",
+        "phpro/grumphp": "^2.11",
         "phpstan/phpstan": "^1.9",
         "phpunit/phpunit": "^9.5",
         "sebastian/phpcpd": "^6.0",
+        "squizlabs/php_codesniffer": "^3.11",
         "symfony/finder": "^6.4"
     },
     "conflict": {
