@@ -377,6 +377,7 @@ return [
         'Devanshi_Mod14' => 0,
         'Devanshi_Mod15' => 0,
         'Devanshi_Mod16' => 0,
+        'Devanshi_Mod17' => 1,
         'Devanshi_Mod2' => 0,
         'Devanshi_Mod3' => 0,
         'Devanshi_Mod4' => 0,

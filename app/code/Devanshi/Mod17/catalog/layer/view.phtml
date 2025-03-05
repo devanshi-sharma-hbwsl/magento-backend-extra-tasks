@@ -1,0 +1,14 @@
+<?php foreach ($block->getFilters() as $filter): ?>
+    <?php if ($filter->getName() == 'Rating'): ?>
+        <div class="filter rating">
+            <strong><?= $filter->getName(); ?></strong>
+            <ul>
+                <?php foreach ($filter->getItems() as $item): ?>
+                    <li>
+                        <a href="<?= $item->getUrl(); ?>"><?= $item->getLabel(); ?> (<?= $item->getCount(); ?>)</a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php endif; ?>
+<?php endforeach; ?>
