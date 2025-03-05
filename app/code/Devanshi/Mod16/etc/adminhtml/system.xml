@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+    <tab id="mod16" translate="label" sortOrder="201">
+            <label>Mod16</label>
+        </tab>
+        <section id="mod16" translate="label" type="text" sortOrder="1001" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Mod16</label>
+            <tab>general</tab>
+            <resource>Devanshi_Mod16::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Background Setting</label>
+                <field id="page_color" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Page Background Color</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
