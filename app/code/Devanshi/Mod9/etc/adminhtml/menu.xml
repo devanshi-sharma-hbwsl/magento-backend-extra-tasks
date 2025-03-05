@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add 
+        id="Devanshi_Mod9::main_menu" 
+        title="Mod9" 
+        translate="title" 
+        module="Devanshi_Mod9" 
+        sortOrder="0" 
+        parent="Magento_Backend::content"
+        resource="Devanshi_Mod9::config"
+        action="mod9/adminhtml/index/index"
+        />
+    </menu>
+</config>
