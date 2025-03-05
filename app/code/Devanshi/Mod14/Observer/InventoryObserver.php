@@ -28,7 +28,6 @@ class InventoryObserver implements ObserverInterface
         if ($qty < $this->threshold) {
             $this->logger->info("Devanshi - Low stock detected for product ID: $productId, Qty: $qty");
 
-            
             $this->eventManager->dispatch(
                 'devanshi_mod14_low_stock',
                 ['product_id' => $productId, 'qty' => $qty]
