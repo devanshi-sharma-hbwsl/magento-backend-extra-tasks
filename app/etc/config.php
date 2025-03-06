@@ -381,6 +381,7 @@ return [
         'Devanshi_Mod18' => 0,
         'Devanshi_Mod19' => 0,
         'Devanshi_Mod2' => 0,
+        'Devanshi_Mod20' => 1,
         'Devanshi_Mod3' => 0,
         'Devanshi_Mod4' => 0,
         'Devanshi_Mod5' => 0,
