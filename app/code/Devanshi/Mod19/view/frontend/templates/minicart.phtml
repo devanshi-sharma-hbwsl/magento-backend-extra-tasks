@@ -1,0 +1,23 @@
+<div class="cross-sell-products">
+    <h3>You may also like these ... </h3>
+    <?php $crossSellProducts = $block->getCrossSellProducts(); ?>
+    <h2>Recommended By Devanshi</h2>
+    <?php if (!empty($crossSellProducts)): ?>
+        <h2>Recommended for You</h2>
+        <?php foreach ($crossSellProducts as $itemId => $products): ?>
+            <div class="cross-sell-item">
+                <h4>For Item ID: <?php echo $itemId; ?></h4>
+                <ul>
+                    <?php foreach ($products as $product): ?>
+                        <li>
+                            <a href="<?php echo $product->getProductUrl(); ?>">
+                                <img src="<?php echo $block->getImageUrl($product); ?>" alt="<?php echo $product->getName(); ?>" />
+                                <span><?php echo $product->getName(); ?></span>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</div>

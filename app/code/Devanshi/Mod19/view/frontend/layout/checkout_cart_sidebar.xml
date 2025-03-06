@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_configuration.xsd">
+    <referenceContainer name="cart.summary">
+        <block class="Devanshi\Mod19\Block\Minicart\Crosssell" name="devanshi_mod19_minicart_crosssell" template="Devanshi_Mod19::minicart.phtml"/>
+    </referenceContainer>
+</layout>
