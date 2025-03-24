@@ -1,0 +1,18 @@
+<?php
+$spouseName = $block->getSpouseName();
+$childrenName = $block->getChildrenName();
+?>
+<div>
+    <h3>Family Information - devanshi newmod</h3>
+    <p><strong>Spouse Name:</strong> <?= $spouseName ?></p>
+    <p><strong>Children Name:</strong> <?= $childrenName ?></p>
+</div>
+
+<div>
+    <div class="block-title">
+        <strong>Your External ID</strong>
+    </div>
+    <div class="block-content">
+        <p><?php echo $block->escapeHtml($block->getExternalId()); ?></p>
+    </div>
+</div>

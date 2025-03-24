@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="devanshi_spouse_children" resource="default" engine="innodb" comment="Spouse and Children Info">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="int" name="customer_id" padding="10" unsigned="true" nullable="false" comment="Customer ID"/>
+        <column xsi:type="text" name="spouse_name" nullable="true" comment="Spouse Name"/>
+        <column xsi:type="text" name="children_name" nullable="true" comment="Children Name"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+
+        <constraint xsi:type="foreign" referenceId="DEVANSHI_CUSTOMER_ID" table="devanshi_spouse_children" column="customer_id" referenceTable="customer_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+    </table>
+</schema>
+

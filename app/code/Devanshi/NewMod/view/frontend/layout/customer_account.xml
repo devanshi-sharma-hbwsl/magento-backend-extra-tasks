@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_account_navigation" />
+        <referenceContainer name="content">
+            <block class="Devanshi\NewMod\Block\FamilyInfo" name="customer.family.information" after="customer_account_dashboard_info" template="Devanshi_NewMod::family_info.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

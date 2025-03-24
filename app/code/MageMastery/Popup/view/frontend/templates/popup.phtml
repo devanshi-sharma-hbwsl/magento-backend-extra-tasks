@@ -1,0 +1,16 @@
+<?php
+
+/** @var Template $block */
+/** @var \MageMastery\Popup\ViewModel\PopupViewModel $viewModel */
+
+// Fix for older PHP versions:
+$viewModel = $block->getData('view_model'); 
+$popup = $viewModel->getPopup();
+?>
+
+<div data-bind="mageInit: {
+    'MageMastery_Popup/js/popup':{
+        'timeout': <?= (int) $popup->getTimeout(); ?>, 
+        'content': '<?= $popup->getName(); ?>'
+    }}">
+</div>
