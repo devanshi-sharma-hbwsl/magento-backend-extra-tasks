@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Quote\Model\Quote\Item\ToOrderItem">
+        <plugin name="vendor2_textfield_quote_to_order" type="Vendor2\Textfield\Plugin\QuoteToOrderItem"/>
+    </type>
+    
+    <type name="Magento\Sales\Ui\Component\Listing\Column\Status">
+        <plugin name="add_custom_text_column" type="Vendor2\Textfield\Plugin\AddCustomTextColumn"/>
+    </type>
+</config>

@@ -1,0 +1,16 @@
+<?php
+/** @var \Magento\Sales\Block\Adminhtml\Items\AbstractItems $block */
+?>
+<?php $_order = $block->getOrder() ?>
+<?php foreach ($_order->getAllItems() as $_item): ?>
+    <?php if ($_item->getCustomText()): ?>
+        <div class="admin__page-section-item-title">
+            <span class="title">Custom Text:</span>
+            <div class="custom-text">
+                <?= $block->escapeHtml($_item->getCustomText()) ?>
+                <br/>
+                <small>(<?= $block->escapeHtml($_item->getCustomTextLength()) ?> characters)</small>
+            </div>
+        </div>
+    <?php endif; ?>
+<?php endforeach; ?>

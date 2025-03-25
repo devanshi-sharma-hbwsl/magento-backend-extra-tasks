@@ -1,0 +1,22 @@
+<div class="field custom-text-area" data-bind="scope: 'customTextArea'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "customTextArea": {
+                    "component": "Vendor2_Textfield/js/view/custom-text-area",
+                    "template": "Vendor2_Textfield/custom-text-area",
+                    "maxLength": 200
+                }
+            }
+        }
+    }
+}
+</script>
+
+<?php
+echo "<!-- DEBUG: Custom textarea template loaded -->";
+?>

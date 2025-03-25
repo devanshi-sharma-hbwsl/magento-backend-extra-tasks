@@ -373,7 +373,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
-        'Dev_Grid' => 1,
+        'Dev_Grid' => 0,
         'Devanshi_CustomSalesOrders' => 0,
         'Devanshi_FinalMod' => 0,
         'Devanshi_Grid' => 0,
@@ -399,9 +399,9 @@ return [
         'Devanshi_SampleModule' => 0,
         'Devanshi_SpouseChildren' => 0,
         'Macademy_Jumpstart' => 0,
-        'MageMastery_Popup' => 1,
-        'Mageplaza_HelloWorld' => 1,
-        'MagicToolbox_Magic360' => 1,
+        'MageMastery_Popup' => 0,
+        'Mageplaza_HelloWorld' => 0,
+        'MagicToolbox_Magic360' => 0,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeCustomerBalance' => 1,
         'PayPal_BraintreeGiftCardAccount' => 1,
@@ -428,6 +428,7 @@ return [
         'Training_ViewModelExample' => 0,
         'Training_VirtualTypes' => 0,
         'Training_WidgetExample' => 0,
+        'Vendor2_Textfield' => 1,
         'Vendor_CustomOrdersGrid' => 1
     ]
 ];

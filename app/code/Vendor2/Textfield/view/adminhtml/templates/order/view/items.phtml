@@ -1,0 +1,14 @@
+<?php
+/** @var \Magento\Sales\Block\Adminhtml\Order\View\Items $block */
+?>
+<?php $_order = $block->getOrder() ?>
+<?php foreach ($_order->getAllVisibleItems() as $_item): ?>
+    <?php if ($_item->getCustomText()): ?>
+        <tr class="custom-text-row">
+            <td colspan="5" style="padding: 10px; background: #f8f8f8;">
+                <strong><?= $block->escapeHtml(__('Custom Message')) ?>:</strong>
+                <?= $block->escapeHtml($_item->getCustomText()) ?>
+            </td>
+        </tr>
+    <?php endif; ?>
+<?php endforeach; ?>
