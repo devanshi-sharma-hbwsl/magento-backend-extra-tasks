@@ -29,15 +29,8 @@ class ExportCsv extends \Magento\Backend\App\Action
 
     public function execute()
     {
-        $collection = $this->collectionFactory->create();
-        $collection->getSelect()->from(
-            ['main_table' => $collection->getMainTable()],
-            ['increment_id', 'customer_name', 'created_at', 'grand_total']
-        );
-
-        // Apply filters if any
-        $this->filter->getCollection($collection);
-
+        $collection = $this->filter->getCollection($this->collectionFactory->create());
+        
         $csv = '';
         $headers = ['Order ID', 'Customer Name', 'Created At', 'Grand Total'];
         $csv .= implode(',', $headers) . "\n";
