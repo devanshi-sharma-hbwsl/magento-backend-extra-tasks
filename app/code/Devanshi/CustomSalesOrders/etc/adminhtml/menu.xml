@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <menu>
+        <add id="Devanshi_CustomSalesOrders::customsalesorders" title="Custom Sales Orders" module="Devanshi_CustomSalesOrders" sortOrder="50"
+             parent="Magento_Sales::sales" action="devanshi_customsalesorders/order/index" resource="Devanshi_CustomSalesOrders::customsalesorders"/>
+    </menu>
+</config>

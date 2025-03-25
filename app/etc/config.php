@@ -373,7 +373,10 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
+        'Dev_Grid' => 1,
+        'Devanshi_CustomSalesOrders' => 0,
         'Devanshi_FinalMod' => 0,
+        'Devanshi_Grid' => 0,
         'Devanshi_Mod1' => 0,
         'Devanshi_Mod14' => 0,
         'Devanshi_Mod15' => 0,
@@ -424,6 +427,7 @@ return [
         'Training_ReplaceConstructorArguments' => 0,
         'Training_ViewModelExample' => 0,
         'Training_VirtualTypes' => 0,
-        'Training_WidgetExample' => 0
+        'Training_WidgetExample' => 0,
+        'Vendor_CustomOrdersGrid' => 1
     ]
 ];

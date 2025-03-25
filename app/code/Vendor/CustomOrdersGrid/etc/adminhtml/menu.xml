@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vendor_CustomOrdersGrid::custom_orders" 
+             title="Custom Sales Orders - Devanshi" 
+             module="Vendor_CustomOrdersGrid" 
+             sortOrder="20" 
+             parent="Magento_Sales::sales" 
+             action="customordersgrid/order" 
+             resource="Vendor_CustomOrdersGrid::custom_orders"/>
+    </menu>
+</config>
