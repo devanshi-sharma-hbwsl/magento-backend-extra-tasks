@@ -1,26 +1,41 @@
 <?php
 namespace Vendor\CustomOrdersGrid\Model\ResourceModel\Order;
 
-class Collection extends \Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult
+use Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult;
+
+class Collection extends SearchResult
 {
     protected function _initSelect()
     {
         parent::_initSelect();
         
-        $this->addFieldToSelect([
-            'entity_id',
-            'increment_id',
-            'created_at',
-            'grand_total',
-            'customer_firstname',
-            'customer_lastname'
-        ]);
+        $this->getSelect()->joinLeft(
+            ['order' => $this->getTable('sales_order')],
+            'main_table.entity_id = order.entity_id',
+            ['customer_firstname', 'customer_lastname']
+        );
         
         $this->addExpressionFieldToSelect(
             'customer_name',
-            "CONCAT({{customer_firstname}}, ' ', {{customer_lastname}})",
-            ['customer_firstname' => 'customer_firstname', 'customer_lastname' => 'customer_lastname']
+            "CONCAT(order.customer_firstname, ' ', order.customer_lastname)",
+            ['customer_firstname' => 'order.customer_firstname', 'customer_lastname' => 'order.customer_lastname']
         );
+        
+        return $this;
+    }
+
+    public function applyFiltersFromRequest(\Magento\Framework\App\RequestInterface $request)
+    {
+        $params = $request->getParams();
+        
+        if (isset($params['filters'])) {
+            $filters = $params['filters'];
+            foreach ($filters as $field => $condition) {
+                if (!empty($condition)) {
+                    $this->addFieldToFilter($field, $condition);
+                }
+            }
+        }
         
         return $this;
     }

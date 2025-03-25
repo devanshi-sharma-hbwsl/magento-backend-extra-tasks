@@ -3,12 +3,13 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="vendor_customordersgrid_order_grid_data_source" xsi:type="string">Vendor\CustomOrdersGrid\Model\ResourceModel\Order\Grid\Collection</item>
+                <item name="vendor_customordersgrid_order_grid_data_source" xsi:type="string">Vendor\CustomOrdersGrid\Model\ResourceModel\Order\Collection</item>
             </argument>
         </arguments>
     </type>
     
-    <virtualType name="Vendor\CustomOrdersGrid\Model\ResourceModel\Order\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <virtualType name="Vendor\CustomOrdersGrid\Model\ResourceModel\Order\Collection" 
+                type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">sales_order_grid</argument>
             <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order</argument>
