@@ -14,7 +14,7 @@ $products = $block->getProducts();
                     <th class="compare-product">
                         <div class="product-image">
                             <a href="<?= $block->escapeUrl($product->getProductUrl()) ?>">
-                                <img src="<?= $block->escapeUrl($block->getProductAttributeValue($product, 'image')) ?>" 
+                                <img src="<?= $block->escapeUrl($block->getProductImageUrl($product)) ?>" 
                                      alt="<?= $block->escapeHtml($product->getName()) ?>"
                                      width="200"
                                      height="200"/>

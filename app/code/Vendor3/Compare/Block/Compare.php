@@ -1,13 +1,38 @@
 <?php
 namespace Vendor3\Compare\Block;
 
-use Magento\Framework\View\Element\Template;
+use Magento\Catalog\Block\Product\Context;
 use Magento\Catalog\Model\Product;
+use Magento\Framework\View\Element\Template;
+use Magento\Catalog\Helper\Image;
 
 class Compare extends Template
 {
-    protected $_template = 'Vendor3_Compare::product/compare/view.phtml';
-    
+    /**
+     * @var Image
+     */
+    protected $imageHelper;
+
+    public function __construct(
+        Context $context, // Changed from Template\Context to Product\Context
+        Image $imageHelper,
+        array $data = []
+    ) {
+        $this->imageHelper = $imageHelper;
+        parent::__construct($context, $data);
+    }
+
+    public function getProductImageUrl(Product $product, $imageType = 'product_comparison_list')
+    {
+        try {
+            return $this->imageHelper->init($product, $imageType)
+                ->setImageFile($product->getImage())
+                ->getUrl();
+        } catch (\Exception $e) {
+            return $this->imageHelper->getDefaultPlaceholderUrl();
+        }
+    }
+
     public function getProducts()
     {
         if (!$this->hasData('products')) {
