@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<acl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
-    <resources>
-        <resource id="Magento_Backend::admin">
-            <resource id="Devanshi_CustomSalesOrders::customsalesorders" title="Custom Sales Orders" sortOrder="50"/>
-        </resource>
-    </resources>
-</acl>

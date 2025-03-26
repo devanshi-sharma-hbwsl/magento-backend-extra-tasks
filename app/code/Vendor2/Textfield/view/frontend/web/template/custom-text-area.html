@@ -1,20 +1,15 @@
-<!-- File: app/code/Vendor2/Textfield/view/frontend/web/template/custom-text-area.html -->
+<!-- app/code/Vendor2/Textfield/view/frontend/web/template/custom-text-area.html -->
 <div class="control">
     <label class="label" for="custom-text-area">
         <span>Custom Message</span>
     </label>
     <textarea id="custom-text-area"
               class="input-text"
-              data-bind="value: customText, 
-                         event: {input: handleInput},
-                         attr: {maxlength: maxLength}"
+              data-bind="textInput: customText,
+                         event: {'change': updateFormData, 'blur': updateFormData}"
               rows="4"
               cols="50"></textarea>
-    <div class="note" data-bind="text: charCount() + '/' + maxLength + ' characters'"></div>
-    
-    <!-- Enhanced Error Message -->
-    <div class="message error limit-reached-message" 
-         data-bind="visible: hasError, text: errorMessage"
-         style="color: #ff0000; font-weight: bold; padding: 5px; background: #ffeeee; border: 1px solid #ffcccc; margin-top: 5px; border-radius: 3px;">
-    </div>
 </div>
+
+<!-- Add this hidden trigger -->
+<div data-bind="visible: false, event: { mouseover: updateFormData }"></div>

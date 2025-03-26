@@ -374,7 +374,6 @@ return [
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
         'Dev_Grid' => 0,
-        'Devanshi_CustomSalesOrders' => 0,
         'Devanshi_FinalMod' => 0,
         'Devanshi_Grid' => 0,
         'Devanshi_Mod1' => 0,
@@ -429,6 +428,7 @@ return [
         'Training_VirtualTypes' => 0,
         'Training_WidgetExample' => 0,
         'Vendor2_Textfield' => 1,
+        'Vendor3_Compare' => 1,
         'Vendor_CustomOrdersGrid' => 1
     ]
 ];

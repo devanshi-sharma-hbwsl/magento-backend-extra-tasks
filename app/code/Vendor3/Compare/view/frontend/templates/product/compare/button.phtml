@@ -1,0 +1,17 @@
+<?php
+/** @var \Vendor3\Compare\Block\CompareButton $block */
+?>
+<div class="compare-actions" style="display: none;">
+    <a href="<?= $block->escapeUrl($block->getCompareUrl()) ?>" 
+       class="action compare primary" 
+       title="<?= $block->escapeHtmlAttr(__('Compare Products')) ?>">
+        <span><?= $block->escapeHtml(__('Compare')) ?></span>
+    </a>
+</div>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Vendor3_Compare/js/compare": {}
+    }
+}
+</script>

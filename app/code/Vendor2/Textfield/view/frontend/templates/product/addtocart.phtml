@@ -1,0 +1,12 @@
+<script>
+    require(['jquery'], function($) {
+        $('#product_addtocart_form').submit(function() {
+            
+            var formData = $(this).data('mageCacheStorage').storage;
+            console.log('DEBUG - Custom Text:', formData.custom_text || 'Not found');
+            return true;
+        });
+    });
+</script>
+
+<?= $block->getChildHtml('', true) ?>

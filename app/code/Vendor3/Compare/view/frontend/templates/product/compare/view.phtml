@@ -1,0 +1,76 @@
+<?php
+/** @var \Vendor3\Compare\Block\Compare $block */
+$products = $block->getProducts();
+?>
+<?php if (count($products) === 2): ?>
+<div class="compare-wrapper">
+    <h1 class="page-title"><?= $block->escapeHtml(__('Compare Products')) ?></h1>
+    <div class="table-wrapper comparison">
+        <table class="data table comparison" id="product-comparison">
+            <thead>
+                <tr>
+                    <th class="label"></th>
+                    <?php foreach ($products as $product): ?>
+                    <th class="compare-product">
+                        <div class="product-image">
+                            <a href="<?= $block->escapeUrl($product->getProductUrl()) ?>">
+                                <img src="<?= $block->escapeUrl($block->getProductAttributeValue($product, 'image')) ?>" 
+                                     alt="<?= $block->escapeHtml($product->getName()) ?>"
+                                     width="200"
+                                     height="200"/>
+                            </a>
+                        </div>
+                    </th>
+                    <?php endforeach; ?>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="label"><?= $block->escapeHtml(__('Name')) ?></th>
+                    <?php foreach ($products as $product): ?>
+                    <td class="compare-product">
+                        <h2 class="product-name">
+                            <a href="<?= $block->escapeUrl($product->getProductUrl()) ?>">
+                                <?= $block->escapeHtml($product->getName()) ?>
+                            </a>
+                        </h2>
+                    </td>
+                    <?php endforeach; ?>
+                </tr>
+                <tr>
+                    <th class="label"><?= $block->escapeHtml(__('Price')) ?></th>
+                    <?php foreach ($products as $product): ?>
+                    <td class="compare-product">
+                        <div class="product-price">
+                            <?= $block->getProductAttributeValue($product, 'price') ?>
+                        </div>
+                    </td>
+                    <?php endforeach; ?>
+                </tr>
+                <tr>
+                    <th class="label"><?= $block->escapeHtml(__('SKU')) ?></th>
+                    <?php foreach ($products as $product): ?>
+                    <td class="compare-product">
+                        <?= $block->escapeHtml($product->getSku()) ?>
+                    </td>
+                    <?php endforeach; ?>
+                </tr>
+                <tr>
+                    <th class="label"><?= $block->escapeHtml(__('Details')) ?></th>
+                    <?php foreach ($products as $product): ?>
+                    <td class="compare-product">
+                        <div class="product-details">
+                            <?= /* @noEscape */ $block->getProductDetails($product) ?>
+                        </div>
+                    </td>
+                    <?php endforeach; ?>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<?php else: ?>
+<div class="message info empty">
+    <div><?= $block->escapeHtml(__('You have no items to compare.')) ?></div>
+</div>
+<?php endif; ?>

@@ -1,49 +1,41 @@
+// app/code/Vendor2/Textfield/view/frontend/web/js/view/custom-text-area.js
 define([
     'ko',
     'uiComponent',
-    'jquery'
-], function (ko, Component, $) {
+    'jquery',
+    'Magento_Catalog/js/product/storage/storage-service'
+], function (ko, Component, $, storageService) {
     'use strict';
 
     return Component.extend({
         defaults: {
-            template: 'Vendor2_Textfield/custom-text-area',
-            maxLength: 200
+            template: 'Vendor2_Textfield/custom-text-area'
         },
-
         initialize: function () {
             this._super();
             this.customText = ko.observable('');
-            this.charCount = ko.observable(0);
-            this.errorMessage = ko.observable('');
-            
-            this.limitReached = ko.computed(function() {
-                return this.charCount() >= this.maxLength;
-            }, this);
         },
-
-        handleInput: function(data, event) {
-            var text = event.target.value;
-            
-            if (text.length > this.maxLength) {
-                text = text.substring(0, this.maxLength);
-                event.target.value = text;
-                this.errorMessage('TraineeName has reached character limit');
-            } else {
-                this.errorMessage('');
-            }
-            
-            this.customText(text);
-            this.charCount(text.length);
-            this.updateFormData();
-        },
-
+        
+        // New method to handle form updates
         updateFormData: function() {
             var form = $('#product_addtocart_form');
-            if (form.data('mageCacheStorage')) {
-                form.data('mageCacheStorage').storage.custom_text = this.customText();
-                form.data('mageCacheStorage').storage.custom_text_length = this.charCount();
-            }
+            if (!form.length) return;
+            
+            // Get the current form data
+            var formData = form.data('mageCacheStorage') || {storage: {}};
+            
+            // Update with custom text
+            formData.storage.custom_text = this.customText();
+            console.log('Custom text updated:', this.customText());
+            
+            // Store back in form
+            form.data('mageCacheStorage', formData);
+            
+            // Also add to browser storage as fallback
+            storageService.set('custom_text_data', {
+                custom_text: this.customText(),
+                product_id: formData.storage.product || $('#product_addtocart_form input[name="product"]').val()
+            });
         }
     });
 });

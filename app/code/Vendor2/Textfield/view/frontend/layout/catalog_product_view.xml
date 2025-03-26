@@ -2,7 +2,20 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="product.info.form.content">
-            <block class="Magento\Catalog\Block\Product\View" name="product.custom.textarea" template="Vendor2_Textfield::product/view/custom_textarea.phtml" before="product.info.addtocart"/>
+            <block class="Magento\Catalog\Block\Product\View" 
+                   name="product.custom.textarea" 
+                   template="Vendor2_Textfield::product/view/custom_textarea.phtml"
+                   before="product.info.addtocart">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="customTextArea" xsi:type="array">
+                                <item name="component" xsi:type="string">Vendor2_Textfield/js/view/custom-text-area</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
