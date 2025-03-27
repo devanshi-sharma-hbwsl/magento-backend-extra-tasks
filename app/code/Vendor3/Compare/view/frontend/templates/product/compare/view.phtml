@@ -2,7 +2,7 @@
 /** @var \Vendor3\Compare\Block\Compare $block */
 $products = $block->getProducts();
 ?>
-<?php if (count($products) === 2): ?>
+<?php if (count($products) >= 2): ?>
 <div class="compare-wrapper">
     <h1 class="page-title"><?= $block->escapeHtml(__('Compare Products')) ?></h1>
     <div class="table-wrapper comparison">

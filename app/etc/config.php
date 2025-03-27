@@ -427,8 +427,9 @@ return [
         'Training_ViewModelExample' => 0,
         'Training_VirtualTypes' => 0,
         'Training_WidgetExample' => 0,
-        'Vendor2_Textfield' => 1,
-        'Vendor3_Compare' => 1,
-        'Vendor_CustomOrdersGrid' => 1
+        'Vendor2_Textfield' => 0,
+        'Vendor3_Compare' => 0,
+        'Vendor5_Featured' => 1,
+        'Vendor_CustomOrdersGrid' => 0
     ]
 ];

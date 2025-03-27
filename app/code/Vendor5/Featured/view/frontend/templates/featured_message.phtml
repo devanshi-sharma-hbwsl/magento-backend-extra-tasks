@@ -1,0 +1,10 @@
+<?php
+/** @var \Magento\Catalog\Block\Category\View $block */
+$category = $block->getCurrentCategory();
+$featuredMessage = $category->getFeaturedMessage();
+
+if ($featuredMessage && trim($featuredMessage) !== ''): ?>
+    <div class="category-featured-message">
+        <?= $block->escapeHtml($featuredMessage, ['b', 'i', 'strong', 'em', 'a']); ?>
+    </div>
+<?php endif; ?>
