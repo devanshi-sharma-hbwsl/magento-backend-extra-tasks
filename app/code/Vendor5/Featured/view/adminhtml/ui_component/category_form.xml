@@ -7,19 +7,25 @@
                     <item name="label" xsi:type="string" translate="true">Featured Message</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">wysiwyg</item>
                     <item name="source" xsi:type="string">category</item>
+                    <item name="wysiwyg" xsi:type="boolean">true</item>
                     <item name="dataScope" xsi:type="string">featured_message</item>
                     <item name="sortOrder" xsi:type="number">40</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">false</item>
                     </item>
                     <item name="additionalClasses" xsi:type="string">admin__field-wide</item>
+                    <!-- WYSIWYG configuration -->
+                    <item name="wysiwygConfigData" xsi:type="array">
+                        <item name="settings" xsi:type="array">
+                            <item name="height" xsi:type="string">200px</item>
+                            <item name="menubar" xsi:type="boolean">false</item>
+                            <item name="toolbar" xsi:type="string">undo redo | bold italic | link</item>
+                        </item>
+                    </item>
                 </item>
             </argument>
-            <settings>
-                <notice translate="true">This message will appear above products on category page. HTML tags will be escaped.</notice>
-            </settings>
         </field>
     </fieldset>
 </form>

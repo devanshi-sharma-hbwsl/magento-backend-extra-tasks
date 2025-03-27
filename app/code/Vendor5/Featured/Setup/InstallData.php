@@ -29,12 +29,14 @@ class InstallData implements InstallDataInterface
             [
                 'type' => 'text',
                 'label' => 'Featured Message',
-                'input' => 'text',
+                'input' => 'textarea',
                 'required' => false,
-                'sort_order' => 40, // Right after category name
+                'sort_order' => 40,
                 'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
+                'wysiwyg_enabled' => true,
+                'is_html_allowed_on_front' => true,
                 'group' => 'Content',
-                'note' => 'This message will appear above products on category page. HTML tags will be escaped.'
+                'note' => 'This message will appear above products on category page.'
             ]
         );
 

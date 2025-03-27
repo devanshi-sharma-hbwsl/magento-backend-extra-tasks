@@ -4,8 +4,12 @@
         <referenceContainer name="content">
             <block class="Magento\Catalog\Block\Category\View" 
                    name="category.featured.message" 
-                   template="Vendor5_Featured::featured_message.phtml" 
-                   before="category.products"/>
+                   template="Vendor5_Featured::featured_message.phtml"
+                   before="category.products">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Vendor5\Featured\ViewModel\HtmlFilter</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>

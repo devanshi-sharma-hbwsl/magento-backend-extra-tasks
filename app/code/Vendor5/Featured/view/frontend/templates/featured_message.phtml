@@ -5,6 +5,6 @@ $featuredMessage = $category->getFeaturedMessage();
 
 if ($featuredMessage && trim($featuredMessage) !== ''): ?>
     <div class="category-featured-message">
-        <?= $block->escapeHtml($featuredMessage, ['b', 'i', 'strong', 'em', 'a']); ?>
+        <?= /* @noEscape */ $featuredMessage ?>
     </div>
 <?php endif; ?>
